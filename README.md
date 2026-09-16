@@ -1,59 +1,99 @@
 <div align="center">
 
-# Hi, I'm Mostafa Sholkamy 👋
+<a href="https://mostafa-portfolio.pages.dev">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&duration=3500&pause=1200&color=8E6CEF&center=true&vCenter=true&width=750&lines=Hi+%F0%9F%91%8B+I%27m+Mostafa+Sholkamy;Flutter+%26+Front-End+Developer;Building+Clean+%26+Scalable+Apps" alt="Typing SVG" />
+</a>
 
-**Flutter & Front-End Developer** — Cairo, Egypt
+### **Flutter & Front-End Developer** — building clean, scalable mobile & web apps.
 
-I build clean, scalable mobile & web apps — turning ideas into real products.
-
-<a href="https://mostafa-portfolio.pages.dev"><img src="https://img.shields.io/badge/Portfolio-Visit-8E6CEF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
-<a href="https://www.linkedin.com/in/mostafa-sholkamy-234238390"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="mailto:mostafasholkamy50@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-8E6CEF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mostafa-portfolio.pages.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mostafa-sholkamy-234238390)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mostafasholkamy50@gmail.com)
 
 </div>
+
+---
+
+## 👨‍💻 About Me
+
+- 📱 **Flutter Developer** — Clean Architecture · Provider · Firebase
+- 🌐 **Front-End Developer** — HTML · CSS · JavaScript
+- 🎓 Engineering & Computer Science Student
+- 🔭 Currently building production-style mobile apps and my own [portfolio](https://mostafa-portfolio.pages.dev)
+- 💡 Passionate about technology, design & entrepreneurship
+- 📍 Cairo, Egypt
 
 ---
 
 ## 🛠️ Tech Stack
 
-<div align="center">
+**Mobile Development**
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+<p><img src="https://skillicons.dev/icons?i=flutter,dart,firebase" alt="Mobile" /></p>
 
-</div>
+**Web Development**
+
+<p><img src="https://skillicons.dev/icons?i=html,css,js" alt="Web" /></p>
+
+**Tools & Design**
+
+<p><img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,figma" alt="Tools" /></p>
 
 ---
 
 ## 🚀 Featured Projects
 
-### 🍳 [FoodAtlas — Recipe & Grocery App](https://github.com/MShulkamy/foodatlas)
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Recipe discovery and grocery-cart mobile app built with **Flutter** using **Clean Architecture (MVC)**.
-Firebase Auth, Cloud Firestore, live REST API recipes, favorites & cart persistence, full Arabic RTL UI, and a complete light/dark theme.
+### 🍳 FoodAtlas
+Recipe & grocery-cart app built with **Flutter** using **Clean Architecture (MVC)**, Firebase Auth, Cloud Firestore, a full Arabic RTL UI and dark mode.
 
-`Flutter` · `Dart` · `Firebase Auth` · `Cloud Firestore` · `Provider` · `Clean Architecture`
+`Flutter` `Firebase` `Provider`
 
-### 🛍️ [Fashion Store — Flutter E-commerce App](https://github.com/MShulkamy/final_project)
+[**→ View Repository**](https://github.com/MShulkamy/foodatlas)
 
-Production-ready e-commerce mobile app built with **Flutter**, following **Clean Architecture** and **Provider** state management.
-Firebase Authentication, Firestore user profiles, real-time products from a REST API, full cart flow, and dynamic dark mode.
+</td>
+<td width="50%" valign="top">
 
-`Flutter` · `Dart` · `Firebase Auth` · `Cloud Firestore` · `Provider` · `REST API`
+### 🛍️ Fashion Store
+Production-ready e-commerce app built with **Flutter** using **Clean Architecture**, Provider, Firebase Auth, Firestore profiles and a dynamic light/dark theme.
+
+`Flutter` `Firebase` `REST API`
+
+[**→ View Repository**](https://github.com/MShulkamy/final_project)
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Analytics
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=MShulkamy&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MShulkamy&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top Languages">
+<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=MShulkamy&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=MShulkamy&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=MShulkamy&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+
+<br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MShulkamy&theme=tokyonight" alt="Profile Summary" />
+
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+
+<img src="https://ghchart.rshah.org/8E6CEF/MShulkamy" alt="Contribution Chart" />
 
 </div>
 
@@ -61,8 +101,10 @@ Firebase Authentication, Firestore user profiles, real-time products from a REST
 
 <div align="center">
 
-**Always learning, building, and growing.**
+### 📫 Let's Connect
 
-⭐ Check out my [portfolio](https://mostafa-portfolio.pages.dev) — and if you like my projects, a star goes a long way!
+[Portfolio](https://mostafa-portfolio.pages.dev) · [LinkedIn](https://www.linkedin.com/in/mostafa-sholkamy-234238390) · [Email](mailto:mostafasholkamy50@gmail.com)
+
+⭐ If you like my work, consider starring my repositories — it means a lot!
 
 </div>
