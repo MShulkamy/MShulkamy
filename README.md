@@ -14,12 +14,12 @@
 
 ---
 
-## 👨‍💻 About Me
+## 👋 About Me
 
-- 📱 **Flutter Developer** — Clean Architecture · Provider · Firebase
+- 📱 **Flutter Developer** — Clean Architecture · Riverpod · Provider · Firebase
 - 🌐 **Front-End Developer** — HTML · CSS · JavaScript
 - 🎓 Engineering & Computer Science Student
-- 🔭 Currently building production-style mobile apps and my own [portfolio](https://mostafa-portfolio.pages.dev)
+- 🚀 Building production-style mobile apps and my own [portfolio](https://mostafa-portfolio.pages.dev)
 - 💡 Passionate about technology, design & entrepreneurship
 - 📍 Cairo, Egypt
 
@@ -29,11 +29,11 @@
 
 **Mobile Development**
 
-<p><img src="https://skillicons.dev/icons?i=flutter,dart,firebase" alt="Mobile" /></p>
+<p><img src="https://skillicons.dev/icons?i=flutter,dart,firebase,sqlite" alt="Mobile" /></p>
 
 **Web Development**
 
-<p><img src="https://skillicons.dev/icons?i=html,css,js" alt="Web" /></p>
+<p><img src="https://skillicons.dev/icons?i=html,css,js,cloudflare" alt="Web" /></p>
 
 **Tools & Design**
 
@@ -47,7 +47,29 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🍳 FoodAtlas
+### 💰 Mizan
+An offline-first personal finance tracker. Local SQLite storage, custom-painted charts, Riverpod state management and a full Arabic RTL interface.
+
+`Flutter` `Riverpod` `sqflite`
+
+[**→ View Repository**](https://github.com/MShulkamy/mizan)
+
+</td>
+<td width="50%" valign="top">
+
+### 🌐 Cloudflare Portfolio
+A full-stack portfolio site with a built-in admin dashboard. Cloudflare Pages Functions, D1 and R2 — with PBKDF2 auth, CSRF protection and rate limiting.
+
+`Cloudflare` `JavaScript` `SQLite`
+
+[**→ View Repository**](https://github.com/MShulkamy/cloudflare-portfolio) · [Live demo](https://cloudflare-portfolio-d49.pages.dev)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🍽️ FoodAtlas
 Recipe & grocery-cart app built with **Flutter** using **Clean Architecture (MVC)**, Firebase Auth, Cloud Firestore, a full Arabic RTL UI and dark mode.
 
 `Flutter` `Firebase` `Provider`
