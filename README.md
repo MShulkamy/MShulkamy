@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Mostafa Sholkamy — Flutter &amp; Front-End Developer" height="150" />
+  <img src="assets/hero.svg" alt="Mostafa Sholkamy — Flutter &amp; Front-End Developer" height="136" />
 </p>
 
 <p align="center">
