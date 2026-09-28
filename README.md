@@ -94,18 +94,25 @@ Production-ready e-commerce app built with **Flutter** using **Clean Architectur
 
 ## 📊 GitHub Analytics
 
+<!-- These are static .svg files committed to this repo and rebuilt daily by
+     .github/workflows/update-cards.yml. No third-party card service, so nothing
+     here can rate-limit, go down, or show an error. -->
+
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MShulkamy&theme=tokyonight" alt="GitHub Stats" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MShulkamy&theme=tokyonight" alt="Top Languages" />
+<img src="assets/streak.svg" alt="Contribution Streak" width="495" />
 
 <br/>
 
-<img src="https://streak-stats.demolab.com?user=MShulkamy&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+<img src="assets/stats.svg" alt="GitHub Stats" width="467" />
 
 <br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MShulkamy&theme=tokyonight" alt="Profile Summary" />
+<img src="assets/languages.svg" alt="Top Languages" width="467" />
+
+<br/>
+
+<img src="assets/profile.svg" alt="Profile" width="467" />
 
 </div>
 
@@ -115,7 +122,7 @@ Production-ready e-commerce app built with **Flutter** using **Clean Architectur
 
 <div align="center">
 
-<img src="https://ghchart.rshah.org/8E6CEF/MShulkamy" alt="Contribution Chart" />
+<img src="assets/contribution-graph.svg" alt="Contribution Graph" />
 
 </div>
 

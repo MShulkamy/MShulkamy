@@ -1,0 +1,49 @@
+name: Update profile cards
+
+# Regenerates the analytics SVGs in assets/ once a day and commits them.
+# Nothing here is interactive: once this file is merged you never touch it again.
+on:
+  schedule:
+    # 03:17 UTC daily. Off-the-hour on purpose - the top of the hour is the
+    # most contended slot on GitHub's scheduler and runs get delayed.
+    - cron: '17 3 * * *'
+  workflow_dispatch: # also runnable by hand from the Actions tab
+
+permissions:
+  contents: write # so the job can push the regenerated SVGs
+
+concurrency:
+  group: update-cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # CARDS_TOKEN is optional. Without it the job uses the automatic
+      # GITHUB_TOKEN, which is enough for public read access. Add a PAT under
+      # Settings -> Secrets if the automatic token ever gets refused.
+      - name: Build cards
+        env:
+          CARDS_TOKEN: ${{ secrets.CARDS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CARDS_TOKEN || github.token }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: node scripts/build-cards.mjs "${{ github.repository_owner }}"
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- assets; then
+            echo "cards already up to date"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore(cards): regenerate analytics SVGs"
+          git push
