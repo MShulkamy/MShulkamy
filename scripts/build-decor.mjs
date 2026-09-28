@@ -48,11 +48,17 @@ const svg = (w, h, label, body) =>
  * so it needs no JavaScript. Every line also carries a static opacity
  * attribute: if a host strips <style>, line 1 still shows and the rest stay
  * hidden, which degrades to a clean static header instead of a blank box. */
-function hero() {
+function hero(engine = process.argv.includes('--css') ? 'css' : 'smil') {
   // Sits on a dark panel rather than a transparent background: GitHub READMEs get
   // read in light *and* dark theme, and an <img>-referenced SVG cannot inherit
   // the page theme. A panel matching the cards keeps the light text legible
   // either way.
+  //
+  // engine: 'smil' drives the timeline with <animate>/<animateTransform>.
+  //         'css'  drives it with @keyframes in a <style> block.
+  // SMIL is the default because it is owned by the SVG document itself, so it
+  // keeps running when the SVG is embedded in an <img> - CSS keyframes on a
+  // nested image document can end up parked on a single frame.
   const W = 467;
   const H = 150;
   const FS = 27;
@@ -64,10 +70,15 @@ function hero() {
     'Flutter & Front-End Developer',
     'Building clean & scalable apps',
   ];
+  const colors = [T.text, T.accent, T.teal];
   const DUR = 10;
-  const DELAY = ['0s', '3.34s', '6.68s'];
+  const DELAY = [0, 3.34, 6.68];
 
-  const style = `<style>
+  const body = [
+    `<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="8" fill="${T.bg}" stroke="${T.border}"/>`,
+  ];
+  if (engine === 'css') {
+    body.push(`<style>
   @keyframes rise {
     0%   { opacity: 1; transform: translateY(0); }
     32%  { opacity: 1; transform: translateY(0); }
@@ -80,32 +91,52 @@ function hero() {
   }
   .ln  { animation: rise ${DUR}s cubic-bezier(.4,0,.2,1) infinite; }
   .crt { animation: blink 1.1s steps(1,end) infinite; }
-${lines.map((_, i) => `  .l${i + 1} { animation-delay: ${DELAY[i]}; }`).join('\n')}
+${lines.map((_, i) => `  .l${i + 1} { animation-delay: ${DELAY[i]}s; }`).join('\n')}
   @media (prefers-reduced-motion: reduce) {
     .ln  { animation: none; }
     .crt { animation: none; }
   }
-</style>`;
+</style>`);
+    lines.forEach((line, i) => {
+      const y = Y0 + i * STEP;
+      body.push(
+        `<g class="ln l${i + 1}"${i === 0 ? '' : ' opacity="0"'}>` +
+          `<text x="${X}" y="${y}" font-size="${FS}" font-weight="700" fill="${colors[i]}">${esc(line)}</text>` +
+          `<rect class="crt" x="0" y="${y - 19}" width="9" height="21" rx="1.5" fill="${T.accent}"/>` +
+          `</g>`
+      );
+    });
+  }
 
-  const colors = [T.text, T.accent, T.teal];
-  const out = [
-    `<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="8" fill="${T.bg}" stroke="${T.border}"/>`,
-    style,
-  ];
-  lines.forEach((line, i) => {
-    const y = Y0 + i * STEP;
-    out.push(
-      `<g class="ln l${i + 1}"${i === 0 ? '' : ' opacity="0"'}>` +
-        `<rect class="crt" x="0" y="${y - 19}" width="9" height="21" rx="1.5" fill="${T.accent}"/>` +
-        `<text x="${X}" y="${y}" font-size="${FS}" font-weight="700" fill="${colors[i]}">${esc(line)}</text>` +
-        `</g>`
+  if (engine === 'smil') {
+    // each line owns its own <animate>/<animateTransform>; the caret blinks via a
+    // nested <g> so the two timelines stay independent
+    body.push(
+      lines
+        .map((line, i) => {
+          const y = Y0 + i * STEP;
+          return (
+            `<g opacity="${i === 0 ? 1 : 0}">` +
+            `<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.32;0.40;1" ` +
+              `dur="${DUR}s" begin="${DELAY[i]}s" repeatCount="indefinite"/>` +
+            `<animateTransform attributeName="transform" type="translate" ` +
+              `values="0 0;0 0;0 -12;0 -12" keyTimes="0;0.32;0.40;1" ` +
+              `dur="${DUR}s" begin="${DELAY[i]}s" repeatCount="indefinite"/>` +
+            `<g><rect x="0" y="${y - 19}" width="9" height="21" rx="1.5" fill="${T.accent}"/>` +
+              `<animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/></g>` +
+            `<text x="${X}" y="${y}" font-size="${FS}" font-weight="700" fill="${colors[i]}">${esc(line)}</text>` +
+            `</g>`
+          );
+        })
+        .join('\n')
     );
-  });
-  out.push(
+  }
+
+  body.push(
     `<rect x="20" y="120" width="${W - 40}" height="1" fill="${T.border}"/>`,
     `<text x="20" y="137" font-size="12.5" fill="${T.muted}">Engineering &amp; CS Student  ·  Cairo, Egypt  ·  Open to Flutter roles</text>`
   );
-  return svg(W, H, 'Mostafa Sholkamy — Flutter & Front-End Developer', out.join('\n'));
+  return svg(W, H, 'Mostafa Sholkamy — Flutter & Front-End Developer', body.join('\n'));
 }
 
 /* ------------------------------------------------------------- badges ---- */
@@ -165,6 +196,9 @@ async function main() {
   const out = {};
 
   out['hero.svg'] = hero();
+  // A/B harness: `node scripts/build-decor.mjs --both` also emits the CSS-engine
+  // variant so the two can be compared in a real browser.
+  if (process.argv.includes('--both')) out['hero-css.svg'] = hero('css');
 
   out['badge-portfolio.svg'] = badge('Portfolio', '#8e6cef', '◈');
   out['badge-linkedin.svg'] = badge('LinkedIn', '#0a66c2', 'in');
