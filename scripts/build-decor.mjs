@@ -60,10 +60,15 @@ function hero() {
   const TAGS = [
     'Flutter & Front-End Developer',
     'Building clean & scalable apps',
-    'Open to Flutter roles',
   ];
-  const DUR = 11;
-  const STEP = DUR / TAGS.length;
+  const DUR = 8;
+  // Two taglines, each on for exactly half of the 8s cycle, staggered by 4s, so
+  // one is always on screen and the crossfades overlap. Duty cycle and stagger
+  // are derived from TAGS.length - a 3-item version left multi-second gaps where
+  // nothing was drawn.
+  const KT = '0;0.42;0.5;0.92;1';
+  const V = '1;1;0;0;1';
+  const slot = DUR / TAGS.length;
 
   const body = [
     `<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="8" fill="${T.bg}" stroke="${T.border}"/>`,
@@ -74,20 +79,16 @@ function hero() {
       `<animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/></g>`,
 
     // rotating tagline
-    ...TAGS.map((tag, i) => {
-      // fade out over the first third of the slot, hold, come back at the end
-      const kt = '0;0.28;0.42;0.9;1';
-      return (
-        `<g opacity="${i === 0 ? 1 : 0}">` +
-        `<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="${kt}" ` +
-          `dur="${DUR}s" begin="${(i * STEP).toFixed(3)}s" repeatCount="indefinite"/>` +
-        `<animateTransform attributeName="transform" type="translate" ` +
-          `values="0 0;0 0;0 -8;0 -8;0 0" keyTimes="${kt}" ` +
-          `dur="${DUR}s" begin="${(i * STEP).toFixed(3)}s" repeatCount="indefinite"/>` +
-        `<text x="${X}" y="84" font-size="21" font-weight="600" fill="${[T.accent, T.teal, T.purple][i]}">${esc(tag)}</text>` +
-        `</g>`
-      );
-    }),
+    ...TAGS.map((tag, i) =>
+      `<g opacity="${i === 0 ? 1 : 0}">` +
+      `<animate attributeName="opacity" values="${V}" keyTimes="${KT}" ` +
+        `dur="${DUR}s" begin="${(i * slot).toFixed(2)}s" repeatCount="indefinite"/>` +
+      `<animateTransform attributeName="transform" type="translate" ` +
+        `values="0 0;0 0;0 -6;0 -6;0 0" keyTimes="${KT}" ` +
+        `dur="${DUR}s" begin="${(i * slot).toFixed(2)}s" repeatCount="indefinite"/>` +
+      `<text x="${X}" y="84" font-size="21" font-weight="600" fill="${[T.accent, T.teal][i]}">${esc(tag)}</text>` +
+      `</g>`
+    ),
 
     `<rect x="20" y="106" width="${W - 40}" height="1" fill="${T.border}"/>`,
     `<text x="20" y="123" font-size="12.5" fill="${T.muted}">Engineering &amp; CS Student  ·  Cairo, Egypt</text>`,
