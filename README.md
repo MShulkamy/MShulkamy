@@ -1,43 +1,41 @@
-<div align="center">
+<p align="center">
+  <img src="assets/hero.svg" alt="Mostafa Sholkamy — Flutter &amp; Front-End Developer" height="150" />
+</p>
 
-<a href="https://mostafa-portfolio.pages.dev">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&duration=3500&pause=1200&color=8E6CEF&center=true&vCenter=true&width=750&lines=Hi+%F0%9F%91%8B+I%27m+Mostafa+Sholkamy;Flutter+%26+Front-End+Developer;Building+Clean+%26+Scalable+Apps" alt="Typing SVG" />
-</a>
-
-### **Flutter & Front-End Developer** — building clean, scalable mobile & web apps.
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-8E6CEF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mostafa-portfolio.pages.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mostafa-sholkamy-234238390)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mostafasholkamy50@gmail.com)
-
-</div>
+<p align="center">
+  <a href="https://mostafa-portfolio.pages.dev"><img src="assets/badge-portfolio.svg" alt="Portfolio" height="30" /></a>
+  <a href="https://www.linkedin.com/in/mostafa-sholkamy-234238390"><img src="assets/badge-linkedin.svg" alt="LinkedIn" height="30" /></a>
+  <a href="mailto:mostafasholkamy50@gmail.com"><img src="assets/badge-email.svg" alt="Email" height="30" /></a>
+</p>
 
 ---
 
 ## 👋 About Me
 
-- 📱 **Flutter Developer** — Clean Architecture · Riverpod · Provider · Firebase
-- 🌐 **Front-End Developer** — HTML · CSS · JavaScript
-- 🎓 Engineering & Computer Science Student
-- 🚀 Building production-style mobile apps and my own [portfolio](https://mostafa-portfolio.pages.dev)
-- 💡 Passionate about technology, design & entrepreneurship
-- 📍 Cairo, Egypt
+I build **Flutter** apps and **full-stack web** products end to end — from the data layer up to the UI — and I care about the boring parts: offline-first storage, clean architecture, and a dashboard you can actually administer from.
+
+- 📱 **Flutter** — Clean Architecture · Riverpod · Provider · custom-painted charts · full Arabic RTL
+- 🌐 **Front-End** — HTML · CSS · JavaScript · responsive, accessible layouts
+- ☁️ **Cloudflare** — Pages · Functions · D1 · R2 — shipping complete products at **$0/month**
+- 🔐 **Security** — PBKDF2-SHA256 auth, CSRF protection, rate limiting, strict input whitelists
+- 🎓 Engineering & Computer Science student
+- 📍 Cairo, Egypt · open to Flutter roles
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Mobile Development**
+**Mobile — Flutter & Dart**
 
-<p><img src="https://skillicons.dev/icons?i=flutter,dart,firebase,sqlite" alt="Mobile" /></p>
+<img src="assets/stack/flutter.svg" alt="Flutter" height="28" /> <img src="assets/stack/dart.svg" alt="Dart" height="28" /> <img src="assets/stack/riverpod.svg" alt="Riverpod" height="28" /> <img src="assets/stack/provider.svg" alt="Provider" height="28" /> <img src="assets/stack/firebase.svg" alt="Firebase" height="28" /> <img src="assets/stack/firestore.svg" alt="Firestore" height="28" /> <img src="assets/stack/sqlite.svg" alt="SQLite" height="28" />
 
-**Web Development**
+**Web — Front-End & Backend**
 
-<p><img src="https://skillicons.dev/icons?i=html,css,js,cloudflare" alt="Web" /></p>
+<img src="assets/stack/html.svg" alt="HTML5" height="28" /> <img src="assets/stack/css.svg" alt="CSS3" height="28" /> <img src="assets/stack/javascript.svg" alt="JavaScript" height="28" /> <img src="assets/stack/typescript.svg" alt="TypeScript" height="28" /> <img src="assets/stack/cloudflare.svg" alt="Cloudflare" height="28" />
 
-**Tools & Design**
+**Tools & Environment**
 
-<p><img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,figma" alt="Tools" /></p>
+<img src="assets/stack/git.svg" alt="Git" height="28" /> <img src="assets/stack/github.svg" alt="GitHub" height="28" /> <img src="assets/stack/vscode.svg" alt="VS Code" height="28" /> <img src="assets/stack/figma.svg" alt="Figma" height="28" /> <img src="assets/stack/docker.svg" alt="Docker" height="28" /> <img src="assets/stack/linux.svg" alt="Linux" height="28" />
 
 ---
 
@@ -48,21 +46,21 @@
 <td width="50%" valign="top">
 
 ### 💰 Mizan
-An offline-first personal finance tracker. Local SQLite storage, custom-painted charts, Riverpod state management and a full Arabic RTL interface.
+An **offline-first personal finance tracker**. Local SQLite storage, custom-painted charts, Riverpod state management and a complete Arabic RTL interface.
 
 `Flutter` `Riverpod` `sqflite`
 
-[**→ View Repository**](https://github.com/MShulkamy/mizan)
+[**→ Repository**](https://github.com/MShulkamy/mizan) · [View topics](https://github.com/MShulkamy/mizan#topics)
 
 </td>
 <td width="50%" valign="top">
 
-### 🌐 Cloudflare Portfolio
-A full-stack portfolio site with a built-in admin dashboard. Cloudflare Pages Functions, D1 and R2 — with PBKDF2 auth, CSRF protection and rate limiting.
+### ☁️ Cloudflare Portfolio
+A full-stack portfolio site with a built-in **admin dashboard** — Pages Functions, D1 and R2, with PBKDF2 auth, CSRF protection and rate limiting. Runs entirely on the free tier.
 
 `Cloudflare` `JavaScript` `SQLite`
 
-[**→ View Repository**](https://github.com/MShulkamy/cloudflare-portfolio) · [Live demo](https://cloudflare-portfolio-d49.pages.dev)
+[**→ Repository**](https://github.com/MShulkamy/cloudflare-portfolio) · [**Live demo**](https://cloudflare-portfolio-d49.pages.dev)
 
 </td>
 </tr>
@@ -70,21 +68,21 @@ A full-stack portfolio site with a built-in admin dashboard. Cloudflare Pages Fu
 <td width="50%" valign="top">
 
 ### 🍽️ FoodAtlas
-Recipe & grocery-cart app built with **Flutter** using **Clean Architecture (MVC)**, Firebase Auth, Cloud Firestore, a full Arabic RTL UI and dark mode.
+Recipe & grocery-cart app in Flutter using **Clean Architecture (MVC)** — Firebase Auth, Cloud Firestore, a full Arabic RTL UI and dark mode.
 
 `Flutter` `Firebase` `Provider`
 
-[**→ View Repository**](https://github.com/MShulkamy/foodatlas)
+[**→ Repository**](https://github.com/MShulkamy/foodatlas) · [View topics](https://github.com/MShulkamy/foodatlas#topics)
 
 </td>
 <td width="50%" valign="top">
 
 ### 🛍️ Fashion Store
-Production-ready e-commerce app built with **Flutter** using **Clean Architecture**, Provider, Firebase Auth, Firestore profiles and a dynamic light/dark theme.
+Production-ready **e-commerce** app in Flutter — Clean Architecture, Provider, Firebase Auth, Firestore profiles and a dynamic light/dark theme.
 
 `Flutter` `Firebase` `REST API`
 
-[**→ View Repository**](https://github.com/MShulkamy/final_project)
+[**→ Repository**](https://github.com/MShulkamy/final_project) · [View topics](https://github.com/MShulkamy/final_project#topics)
 
 </td>
 </tr>
@@ -94,41 +92,37 @@ Production-ready e-commerce app built with **Flutter** using **Clean Architectur
 
 ## 📊 GitHub Analytics
 
-<!-- These are static .svg files committed to this repo and rebuilt daily by
-     .github/workflows/update-cards.yml. No third-party card service, so nothing
-     here can rate-limit, go down, or show an error. -->
+<!-- Rendered from the GitHub API by scripts/build-cards.mjs into assets/*.svg and
+     committed by .github/workflows/update-cards.yml. They are static files served
+     from GitHub's own CDN, so no third-party card service can rate-limit them. -->
 
-<div align="center">
+<p align="center">
+  <img src="assets/streak.svg" alt="Contribution streak" height="175" />
+</p>
 
-<img src="assets/streak.svg" alt="Contribution Streak" width="495" />
+<p align="center">
+  <img src="assets/stats.svg" alt="GitHub stats" height="200" />
+</p>
 
-<br/>
+<p align="center">
+  <img src="assets/languages.svg" alt="Top languages" height="288" />
+</p>
 
-<img src="assets/stats.svg" alt="GitHub Stats" width="467" />
-
-<br/>
-
-<img src="assets/languages.svg" alt="Top Languages" width="467" />
-
-<br/>
-
-<img src="assets/profile.svg" alt="Profile" width="467" />
-
-</div>
+<p align="center">
+  <img src="assets/profile.svg" alt="Profile summary" height="200" />
+</p>
 
 ---
 
 ## 📈 Contribution Graph
 
-<div align="center">
-
-<img src="assets/contribution-graph.svg" alt="Contribution Graph" />
-
-</div>
+<p align="center">
+  <img src="assets/contribution-graph.svg" alt="Contribution graph" height="169" />
+</p>
 
 ---
 
-<div align="center">
+<p align="center">
 
 ### 📫 Let's Connect
 
@@ -136,4 +130,4 @@ Production-ready e-commerce app built with **Flutter** using **Clean Architectur
 
 ⭐ If you like my work, consider starring my repositories — it means a lot!
 
-</div>
+</p>

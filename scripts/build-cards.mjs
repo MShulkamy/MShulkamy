@@ -294,8 +294,10 @@ function cardStats(s) {
 }
 
 function cardStreak(s) {
-  const W = 495;
+  // same 467px width as every other card, so the section reads as one family
+  const W = 467;
   const H = 175;
+  const centers = [78, 233.5, 389];
   const cell = (cx, value, label, iconName, color) =>
     [
       icon(iconName, cx - 8, 76, 16, color),
@@ -304,11 +306,13 @@ function cardStreak(s) {
     ].join('');
 
   const out = frame(W, H, 'Contribution Streak');
-  out.push('<line x1="165" y1="70" x2="165" y2="152" stroke="' + T.border + '" stroke-width="1"/>');
-  out.push('<line x1="330" y1="70" x2="330" y2="152" stroke="' + T.border + '" stroke-width="1"/>');
-  out.push(cell(82, s.totalContributions, 'Total Contributions', 'commit', T.green));
-  out.push(cell(248, s.current, 'Current Streak', 'clock', T.orange));
-  out.push(cell(413, s.longest.count, 'Longest Streak', 'calendar', T.purple));
+  const split = (a, b) => (a + b) / 2;
+  for (const x of [split(centers[0], centers[1]), split(centers[1], centers[2])]) {
+    out.push(`<line x1="${x}" y1="70" x2="${x}" y2="152" stroke="${T.border}" stroke-width="1"/>`);
+  }
+  out.push(cell(centers[0], s.totalContributions, 'Total Contributions', 'commit', T.green));
+  out.push(cell(centers[1], s.current, 'Current Streak', 'clock', T.orange));
+  out.push(cell(centers[2], s.longest.count, 'Longest Streak', 'calendar', T.purple));
   out.push('</svg>');
   return out.join('\n');
 }
@@ -383,8 +387,8 @@ function cardGraph(days) {
   const GAP = 2.5;
   const STEP = CELL + GAP;
   const WEEKS = 53;
-  const W = 20 + WEEKS * STEP + 34;
-  const H = 44 + 7 * STEP + 30;
+  const W = Math.round(20 + WEEKS * STEP + 34);
+  const H = Math.round(44 + 7 * STEP + 30);
   const today = new Date();
   const endSunday = addDays(today, -today.getUTCDay()); // dow 0=Sun
   const start = addDays(endSunday, -(WEEKS * 7 - 1));
