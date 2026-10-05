@@ -50,7 +50,7 @@ An **offline-first personal finance tracker**. Local SQLite storage, custom-pain
 
 `Flutter` `Riverpod` `sqflite`
 
-[**→ Repository**](https://github.com/MShulkamy/mizan) · [View topics](https://github.com/MShulkamy/mizan#topics)
+[**→ Repository**](https://github.com/MShulkamy/mizan) · [**Live demo**](https://mizan-demo.pages.dev)
 
 </td>
 <td width="50%" valign="top">
@@ -72,7 +72,7 @@ Recipe & grocery-cart app in Flutter using **Clean Architecture (MVC)** — Fire
 
 `Flutter` `Firebase` `Provider`
 
-[**→ Repository**](https://github.com/MShulkamy/foodatlas) · [View topics](https://github.com/MShulkamy/foodatlas#topics)
+[**→ Repository**](https://github.com/MShulkamy/foodatlas) · [**Live demo**](https://foodatlas-demo.pages.dev)
 
 </td>
 <td width="50%" valign="top">
@@ -82,7 +82,7 @@ Production-ready **e-commerce** app in Flutter — Clean Architecture, Provider,
 
 `Flutter` `Firebase` `REST API`
 
-[**→ Repository**](https://github.com/MShulkamy/final_project) · [View topics](https://github.com/MShulkamy/final_project#topics)
+[**→ Repository**](https://github.com/MShulkamy/final_project) · [**Live demo**](https://fashion-store-demo.pages.dev)
 
 </td>
 </tr>
